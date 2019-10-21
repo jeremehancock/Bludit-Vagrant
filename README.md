@@ -13,16 +13,16 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 
 ## Installation Instructions
 1. Find a directory on your computer that you'd like to install this repo
-2. `$ git clone git@github.com:mhancoc7/Bludit-Vagrant.git`
-3. `$ cd Bludit-Vagrant`
-4. `$ vagrant up`
+2. Run `git clone git@github.com:mhancoc7/Bludit-Vagrant.git`
+3. Run `cd Bludit-Vagrant`
+4. Run `vagrant up`
 
 ## Usage
 1. Make sure the vagrant process is completed and your virtual machine is ready
 2. Point your web browser over to http://localhost:8080 to view your Bludit site
 3. Follow the steps to complete the Bludit installation
-4. If you'd like to login into your virtual machine - `$ vagrant ssh` 
+4. If you'd like to login into your virtual machine - `vagrant ssh` 
 5. Bludit files are located in `localhost/www/html` on your local machine and are syncronized with `/var/www/html` on your vm
 
 ## Cleanup
-1. If you are ready to delete your WordPress VM from you local machine - `$ vagrant destroy -f`
+1. If you are ready to delete your WordPress VM from you local machine - `vagrant destroy -f`
