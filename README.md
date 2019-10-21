@@ -12,7 +12,7 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 2. Install [Virtual Box](https://www.virtualbox.org/)
 
 ## Installation Instructions
-1. Find a directory on your computer that you'd like to install this repo
+1. Find a directory on your computer where you'd like to install this repo
 2. Run `git clone git@github.com:mhancoc7/Bludit-Vagrant.git`
 3. Run `cd Bludit-Vagrant`
 4. Run `vagrant up`
