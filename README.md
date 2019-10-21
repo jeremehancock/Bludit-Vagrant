@@ -25,4 +25,4 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 5. Bludit files are located in `localhost/www/html` on your local machine and are syncronized with `/var/www/html` on your virtual machine
 
 ## Cleanup
-1. If you are ready to delete your Bludit virtual machine from you local machine - `vagrant destroy -f`
+1. If you are ready to delete your Bludit virtual machine from your local machine - `vagrant destroy -f`
