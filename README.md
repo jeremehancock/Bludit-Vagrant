@@ -22,7 +22,7 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 2. Point your web browser to http://localhost:8080 to view your Bludit site
 3. Follow the steps to complete the Bludit installation
 4. If you'd like to login into your virtual machine - `vagrant ssh` 
-5. Bludit files are located in `localhost/www/html` on your local machine and are syncronized with `/var/www/html` on your vm
+5. Bludit files are located in `localhost/www/html` on your local machine and are syncronized with `/var/www/html` on your virtual machine
 
 ## Cleanup
-1. If you are ready to delete your WordPress VM from you local machine - `vagrant destroy -f`
+1. If you are ready to delete your Bludit virtual machine from you local machine - `vagrant destroy -f`
