@@ -1,5 +1,5 @@
 # Bludit-Vagrant
-Vagrant for Bludit Flat File CMS
+Vagrant for [Bludit Flat File CMS](https://www.bludit.com/)
 
 The goal of this project is to create a quick virtual machine setup with a Bludit installation for testing and development purposes. The following technologies are automatically installed for you:
 * Ubuntu Bionic (18.04)
