@@ -27,3 +27,5 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 
 ## Cleanup
 1. If you are ready to delete your Bludit virtual machine from your local machine - `vagrant destroy -f`
+
+> #### `Note: All code is provided as-is without any warranty. Use at your own risk.`
