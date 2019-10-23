@@ -5,7 +5,7 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 * Ubuntu Bionic (18.04)
 * Apache
 * PHP
-* [Bludit v3.10.0 "Mateo"](https://www.bludit.com/)
+* [Bludit](https://www.bludit.com/)
 
 ## Pre-Installation
 1. Install [Vagrant](https://www.vagrantup.com/)
