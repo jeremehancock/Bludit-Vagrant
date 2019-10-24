@@ -25,8 +25,8 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 5. Bludit files are located in `localhost/www/html` on your local machine and are syncronized with `/var/www/html` on your virtual machine
 
 ## Upgrade
-* If vagrant is already running: Run `vagrant provision`
-* If vagrant has been halted: Run `vagrant up --provision`
+* If vagrant is already up run: `vagrant provision`
+* If vagrant has been halted run: `vagrant up --provision`
 
 > Keep in mind upgrading will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel. 
 
