@@ -28,7 +28,7 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 * If vagrant is already running: Run `vagrant provision`
 * If vagrant has been halted: Run `vagrant up --provision`
 
-> Keep in mind and upgrade will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel. 
+> Keep in mind upgrading will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel. 
 
 ## Cleanup
 1. If you are ready to delete your Bludit virtual machine from your local machine - `vagrant destroy -f`
