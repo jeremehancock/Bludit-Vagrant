@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  config.vm.synced_folder "localhost/www/html/", "/var/www/html", owner: "www-data", group: "www-data"
+  config.vm.synced_folder "localhost/www/", "/var/www", owner: "www-data", group: "www-data"
 
   # Define the bootstrap file: A (shell) script that runs after first setup of your box (= provisioning)
   config.vm.provision :shell, path: "setup/bootstrap.sh"

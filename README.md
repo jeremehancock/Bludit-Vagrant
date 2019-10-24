@@ -5,7 +5,7 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 * Ubuntu Bionic (18.04)
 * Apache
 * PHP
-* [Bludit](https://www.bludit.com/)
+* [Bludit](https://www.bludit.com/) (Latest Version)
 
 ## Pre-Installation
 1. Install [Vagrant](https://www.vagrantup.com/)
@@ -23,6 +23,12 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 3. Follow the steps to complete the Bludit installation
 4. If you'd like to login into your virtual machine - `vagrant ssh` 
 5. Bludit files are located in `localhost/www/html` on your local machine and are syncronized with `/var/www/html` on your virtual machine
+
+## Upgrade
+* If vagrant is already running: Run `vagrant provision`
+* If vagrant has been halted: Run `vagrant up --provision`
+
+> Keep in mind and upgrade will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel. 
 
 ## Cleanup
 1. If you are ready to delete your Bludit virtual machine from your local machine - `vagrant destroy -f`

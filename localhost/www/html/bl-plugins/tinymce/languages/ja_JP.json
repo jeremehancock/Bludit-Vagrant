@@ -1,7 +1,0 @@
-{
-	"plugin-data":
-	{
-		"name": "TinyMCE",
-		"description": "HTML形式のコンテンツエディターです。Markdownを使用したくないユーザーに推奨します。"
-	}
-}
