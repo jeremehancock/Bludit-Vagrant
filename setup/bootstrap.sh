@@ -19,6 +19,7 @@ sudo -E apt-get install -y php-json
 echo -e "\e[96m*************************** Install Misc Packages **********************\e[0m"
 sudo -E apt-get install -y vim
 sudo -E apt-get install -y unzip
+sudo -E apt-get install -y irqbalance
 
 echo -e "\e[96m*************************** Install Latest Bludit **********************\e[0m"
 cd /var/www/html
