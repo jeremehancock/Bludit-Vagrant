@@ -16,14 +16,21 @@ echo -e "\e[96m*************************** Install Misc Packages ***************
 sudo -E apt-get install -y vim unzip rsync
 
 echo -e "\e[96m*************************** Install Latest Bludit **********************\e[0m"
-cd /var/www/html
-sudo -E wget https://www.bludit.com/releases/bludit-latest.zip -O temp.zip
-sudo -E unzip -o temp.zip
-sudo -E rm temp.zip
-sudo -E mkdir -p bludit
-sudo -E rsync -a bludit-*/ bludit/
-sudo -E rm -rf bludit-*
-cd ~
+TMP_DIR=$(mktemp -d)
+sudo -E wget https://www.bludit.com/releases/bludit-latest.zip -O "$TMP_DIR/bludit.zip"
+sudo -E unzip -q -o "$TMP_DIR/bludit.zip" -d "$TMP_DIR/extracted"
+sudo -E mkdir -p /var/www/html/bludit
+# The Bludit zip may extract either directly or inside a single wrapper
+# directory (e.g. bludit-3.x.x/). Handle both layouts.
+EXTRACTED_ENTRIES=("$TMP_DIR"/extracted/*)
+if [ ${#EXTRACTED_ENTRIES[@]} -eq 1 ] && [ -d "${EXTRACTED_ENTRIES[0]}" ]; then
+  SRC_DIR="${EXTRACTED_ENTRIES[0]}"
+else
+  SRC_DIR="$TMP_DIR/extracted"
+fi
+sudo -E rsync -a "$SRC_DIR/" /var/www/html/bludit/
+sudo -E rm -rf "$TMP_DIR"
+sudo -E chown -R www-data:www-data /var/www/html/bludit
 
 echo -e "\e[96m*************************** Enable Mod Rewrite *************************\e[0m"
 sudo -E a2enmod rewrite
