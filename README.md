@@ -2,9 +2,9 @@
 Vagrant for [Bludit Flat File CMS](https://www.bludit.com/)
 
 The goal of this project is to create a quick virtual machine setup with a Bludit installation for testing and development purposes. The following technologies are automatically installed for you.
-* Ubuntu Bionic (18.04)
-* Apache
-* PHP
+* Ubuntu Jammy (22.04 LTS)
+* Apache 2
+* PHP 8
 * [Bludit](https://www.bludit.com/) (Latest Version)
 
 ## Pre-Installation
