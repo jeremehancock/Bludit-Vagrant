@@ -17,7 +17,7 @@ sudo -E apt-get install -y vim unzip rsync
 
 echo -e "\e[96m*************************** Install Latest Bludit **********************\e[0m"
 TMP_DIR=$(mktemp -d)
-sudo -E wget -nv https://www.bludit.com/releases/bludit-latest.zip -O "$TMP_DIR/bludit.zip" 2>&1
+sudo -E wget -nv https://github.com/bludit/bludit/archive/refs/tags/3.22.0.zip -O "$TMP_DIR/bludit.zip" 2>&1
 sudo -E unzip -q -o "$TMP_DIR/bludit.zip" -d "$TMP_DIR/extracted"
 sudo -E mkdir -p /var/www/html/bludit
 # The Bludit zip may extract either directly or inside a single wrapper
