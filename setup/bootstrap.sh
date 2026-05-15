@@ -13,11 +13,20 @@ echo -e "\e[96m*************************** Install Extra PHP Packages **********
 sudo -E apt-get install -y php-xml php-gd php-mbstring php-curl php-zip
 
 echo -e "\e[96m*************************** Install Misc Packages **********************\e[0m"
-sudo -E apt-get install -y vim unzip rsync
+sudo -E apt-get install -y vim unzip rsync curl
 
 echo -e "\e[96m*************************** Install Latest Bludit **********************\e[0m"
 TMP_DIR=$(mktemp -d)
-sudo -E wget -nv https://github.com/bludit/bludit/archive/refs/tags/3.22.0.zip -O "$TMP_DIR/bludit.zip" 2>&1
+BLUDIT_ZIP_URL=$(curl -fsSL https://api.github.com/repos/bludit/bludit/releases/latest \
+  | grep -Eo '"zipball_url"\s*:\s*"[^"]+"' \
+  | head -n1 \
+  | sed -E 's/.*"zipball_url"\s*:\s*"([^"]+)".*/\1/')
+if [ -z "$BLUDIT_ZIP_URL" ]; then
+  echo "Failed to determine latest Bludit release URL" >&2
+  exit 1
+fi
+echo "Latest Bludit release: $BLUDIT_ZIP_URL"
+sudo -E wget -nv -L "$BLUDIT_ZIP_URL" -O "$TMP_DIR/bludit.zip" 2>&1
 sudo -E unzip -q -o "$TMP_DIR/bludit.zip" -d "$TMP_DIR/extracted"
 sudo -E mkdir -p /var/www/html/bludit
 # The Bludit zip may extract either directly or inside a single wrapper
