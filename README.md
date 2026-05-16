@@ -25,12 +25,14 @@ The goal of this project is to create a quick virtual machine setup with a Bludi
 5. Bludit files are located in `localhost/www/html/bludit` on your local machine and are syncronized with `/var/www/html/bludit` on your virtual machine
 
 ## Upgrade
-* If vagrant is already up - `vagrant provision`
-* If vagrant has been halted - `vagrant up --provision`
+The Bludit files are only downloaded and copied on the **first** `vagrant up`. After that, re-running `vagrant provision` or `vagrant up --provision` will re-run the other provisioning steps (Apache, PHP, etc.) but will **not** touch your existing Bludit install. This is tracked by the marker file `localhost/www/html/bludit/.bludit-installed`.
 
-> ####  *Upgrading will remove any custom modifications that you have made to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel.*
+To force a fresh Bludit download (overwriting your site):
+1. Back up `localhost/www/html/bludit` first
+2. Delete the marker file: `rm localhost/www/html/bludit/.bludit-installed`
+3. Run `vagrant provision` (or `vagrant up --provision`)
 
-> ####  *Before upgrading backup any custom modifications that you have made to Bludit so you can restore them post upgrade.*
+> ####  *A forced re-install will overwrite custom modifications to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel.*
 
 ## Cleanup
 1. If you are ready to delete your Bludit virtual machine from your local machine - `vagrant destroy -f`
