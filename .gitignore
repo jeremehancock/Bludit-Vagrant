@@ -5,6 +5,8 @@
 # Bludit installation files (downloaded on first run and managed by users)
 localhost/www/html/bludit/
 
+localhost/www/html/index.html
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
