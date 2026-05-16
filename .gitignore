@@ -1,0 +1,14 @@
+# Vagrant runtime state
+.vagrant/
+*.log
+
+# Bludit installation files (downloaded on first run and managed by users)
+localhost/www/html/bludit/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
