@@ -32,7 +32,7 @@ To force a fresh Bludit download (overwriting your site):
 2. Delete the marker file: `rm localhost/www/html/bludit/.bludit-installed`
 3. Run `vagrant provision` (or `vagrant up --provision`)
 
-> ####  *A forced re-install will overwrite custom modifications to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel.*
+> A forced re-install will overwrite custom modifications to Bludit. It will not overwrite the content or settings that you have applied in the Bludit admin panel (those live under `bl-content/` and are preserved), but you should still back up first.
 
 ## Cleanup
 1. If you are ready to delete your Bludit virtual machine from your local machine - `vagrant destroy -f`
