@@ -110,7 +110,3 @@ Bludit-Vagrant/
 ## AI Disclaimer
 
 This project was originally developed without the use of AI. It has since been updated to a more modern stack with the help of AI.
-
-## Disclaimer
-
-All code is provided as-is without any warranty. Use at your own risk.
